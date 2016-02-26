@@ -10,8 +10,8 @@ This being my first experience with Backbone, I'm sure some parts of the JS appl
 
 
 # Run project
-- Download `app` folder from Git or download zip file or,
-- Extract/unzip `bitcoin-game-pierre-luc-nichols.zip` on your computer.
+- Download `app` folder from Git (and/or download zip file).
+- Extract/unzip content of zip file on your computer.
 - Open `app/index.html` in your browser.
 
 
