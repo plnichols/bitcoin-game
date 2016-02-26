@@ -13,8 +13,3 @@ This being my first experience with Backbone, I'm sure some parts of the JS appl
 - Download `app` folder from Git (and/or download zip file).
 - Extract/unzip content of zip file on your computer.
 - Open `app/index.html` in your browser.
-
-
-
-# Tech notes
-All development files (gulp, bower, package.json, etc...) are included within the zip file. These are not necessary to run the project, but are there just as a reference.
