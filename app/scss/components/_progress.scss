@@ -1,0 +1,23 @@
+.progress {
+    position: relative;
+    margin: 2rem 0;
+    border-bottom: 1px solid $border;
+}
+
+.progress__bar {
+    .progress--active & {
+        display: block;
+        position: absolute;
+        top: -4px;
+        left: 0;
+        height: 8px;
+        background-color: $secondary-color;
+        animation: timer 60s 1 linear;
+    }
+}
+
+
+@keyframes timer {
+  0% { right: 100%; }
+  100% { right: 0%; }
+}

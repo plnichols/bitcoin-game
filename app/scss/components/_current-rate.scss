@@ -1,0 +1,28 @@
+.current-rate {
+    width: 100%;
+    padding: 20px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.current-rate__title {
+    text-align: center;
+}
+
+.current-rate__price {
+    max-width: 300px;
+    width: 70%;
+    margin: 5px auto 0;
+    padding: 6px 15px;
+    border: 1px solid #222;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+.current-rate__number {
+    font-size: 32px;
+    font-weight: 300;
+    color: #f2f2f2;
+}
+

@@ -1,0 +1,19 @@
+.hero {
+    background: #333;
+}
+
+.hero__inner {
+    margin: 0 auto;
+    padding: $base-padding/2.5;
+    text-align: center;
+}
+
+.hero__title {
+    color: #eee;
+}
+
+.hero__desc {
+    margin: 0;
+    color: #aaa;
+    font-size: 13px;
+}

@@ -1,0 +1,13 @@
+.footer {
+	padding: $base-padding;
+	text-align: center;
+	border-top: 1px solid #f2f2f2;
+}
+
+.footer__inner {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 80%;
+	font-size: 11px;
+	color: $secondary-text-color;
+}

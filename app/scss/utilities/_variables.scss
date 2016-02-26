@@ -1,0 +1,36 @@
+
+// Breakpoints for media queries (based on getskeleton.com grid)
+$breakpoints: (
+    'tiny' : 400px,
+    'small' : 550px,
+    'medium' : 750px,
+    'large' : 1000px,
+    'huge' : 1200px
+);
+
+// Base values
+$base-font-size: 16px;
+$base-padding: 30px;
+$base-radius: 5px;
+$base-duration: 0.2s;
+$base-transition: all $base-duration ease-in-out;
+$base-transition-fast: all ($base-duration/2) ease-in-out;
+$base-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+// Colors
+$bg-color: #f8f8f8;
+$primary-text-color: #333;
+$secondary-text-color: #777;
+$primary-color: #222;
+$secondary-color: #d80e0e;
+$tercary-color: #fb2f2f;
+
+// Message
+$warning-color: #f44;
+$info-color: #fc3;
+$success-color: #539212;
+
+// Borders
+$border: #ccc;
+$border-dark: #aaa;
+$border-light: #e1e1e1;

@@ -1,0 +1,100 @@
+.bet {
+    text-align: center;
+    padding: $base-padding/2;
+    background-color: $bg-color;
+
+    fieldset {
+        margin: $base-padding/2 0;
+    }
+}
+
+.bet__title {
+    font-size: 20px;
+    margin: 0;
+}
+
+.bet__info {
+    font-size: 12px;
+    color: #aaa;
+    letter-spacing: 0;
+    margin-bottom: 2rem;
+}
+
+.bet__option {
+    display: inline-block;
+    padding: 5px 30px 7px;
+    margin: 2px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid $border;
+    background-color: $bg-color;
+    border-radius: 3px;
+    cursor: pointer;
+    text-transform: none;
+}
+
+.bet__name {
+    display: block;
+    font-size: 16px;
+}
+
+.bet__odds {
+    display: block;
+    font-size: 10px;
+    color: #666;
+    font-weight: 300;
+}
+
+.bet__radio {
+    display: block;
+    width: 0;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    visibility:hidden;
+}
+
+.bet__radio:checked {
+    + .bet__option {
+        background-color: $primary-color;
+        color: white;
+
+        .bet__odds {
+            color: #aaa;
+        }
+    }
+}
+
+.bet__stake {
+    display: inline-block;
+    width: 80px;
+    margin: 0 4px 0 8px;
+}
+
+.bet__max {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.bet__submit {
+    display: inline-block;
+}
+
+.bet__list {
+    font-size: 16px;
+    margin-bottom: 1.1rem;
+}
+
+.bet__list--won {
+    color: $success-color;
+}
+
+.bet__list--lost {
+    color: $warning-color;
+}
+
+.bet__replay {
+    margin: 1.25rem 0;
+}
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Bitcoin Game</title>
+  <meta name="description" content="Bitcoin Game - Single Page Application built using Backbone.js">
+  <meta name="author" content="Pierre Luc Nichols">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/skeleton/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/skeleton/css/skeleton.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div id="account-balance"></div>
+  <div id="bitcoin-rate"></div>
+  <div id="bet-selection"></div>
+  <div id="bet-result"></div>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="mailto:pierrelucnichols@gmail.com">Pierre Luc Nichols</a> - 2016
+    </div>
+  </footer>
+
+
+
+  <!-- Bitcoin rate template -->
+  <script type="text/template" id="bitcoin-rate-tmpl">
+    <div class="hero">
+      <div class="hero__inner">
+        <h1 class="hero__title">Bitcoin Game</h1>
+        <p class="hero__desc">Here's the current value of a bitcoin.<br />Can you guess if it'll go up or down?</p>
+        <div class="current-rate">
+          <div class="current-rate__price">
+            <div class="current-rate__number"><%= midmarket %></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+
+  <!-- Account balance template -->
+  <script type="text/template" id="account-balance-tmpl">
+    <nav class="header">
+      <span class="header__balance">
+        Account balance: <span class="header__amount"><%= balance %></span>
+      </span>
+    </nav>
+  </script>
+
+
+  <!-- Bet selection template -->
+  <script type="text/template" id="bet-selection-tmpl">
+    <div class="bet">
+      <h3 class="bet__title">Future price of a Bitcoin</h3>
+      <h4 class="bet__info">(predict the price of a bitcoin 1 minute from now compared to current price above)</h4>
+      <form>
+        <fieldset>
+          <input class="bet__radio" type="radio" name="bitcoin-future-price" id="bitcoin-future-price-lower" value="lower" checked="checked" />
+          <label class="bet__option button" for="bitcoin-future-price-lower">
+            <span class="bet__name">Lower</span>
+            <span class="bet__odds">odds: 1/1</span>
+          </label>
+          <input class="bet__radio" type="radio" name="bitcoin-future-price" id="bitcoin-future-price-higher" value="higher" />
+          <label class="bet__option button" for="bitcoin-future-price-higher">
+            <span class="bet__name">Higher</span>
+            <span class="bet__odds">odds: 1/1</span>
+          </label>
+        </fieldset>
+        <fieldset>
+          <label>
+            Stake: <input class="bet__stake" type="number" value="10" min="0" max="<%= balance %>" placeholder="Stake" />
+              <span class="bet__max">(max: <%= balance %>)</span>
+          </label>
+        </fieldset>
+        <button class="bet__submit">Place bet</button>
+      </form>
+    </div>
+  </script>
+
+
+  <!-- Bet result template -->
+  <script type="text/template" id="bet-result-tmpl">
+    <div class="bet">
+      <h3 class="bet__title">Bet <% if(result.outcome === '...') { %> in progress... <% } else { %> complete. <% } %></h3>
+      <h4 class="bet__info">Here are the details of your wager:</h4>
+      <div class="progress <% if(result.outcome === '...') { %> progress--active <% } %>">
+        <div class="progress__bar" style="animation-duration: <%= duration %>s"></div>
+      </div>
+      <h4 class="bet__list">Selection: <strong><%= bet.selection %></strong></h4>
+      <h4 class="bet__list">Stake: <strong><%= bet.stake %></strong></h4>
+      <h4 class="bet__list">Previous price: <strong><%= bet.price %></strong></h4>
+      <h4 class="bet__list <% if(result.outcome === 'won') { %> bet__list--won <% } else if(result.outcome === 'lost') { %> bet__list--lost <% } %>">
+        Result: <strong><%= result.outcome %></strong> <% if(result.outcome !== '...') { %> <small>(<%= result.priceEnd %>)</small> <% } %>
+      </h4>
+      <% if(result.outcome!== '...') { %>
+        <button class="bet__replay">Play again</button>
+      <% } %>
+    </div>
+  </script>
+
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/underscore/underscore-min.js"></script>
+  <script src="bower_components/backbone/backbone-min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

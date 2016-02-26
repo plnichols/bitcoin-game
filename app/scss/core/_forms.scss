@@ -1,0 +1,13 @@
+.button, 
+button, 
+input[type="submit"], 
+input[type="reset"], 
+input[type="button"] {
+    height: auto;
+    margin: 0;
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    border-radius: $base-radius;
+    transition: $base-transition-fast;
+}

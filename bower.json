@@ -1,0 +1,15 @@
+{
+  "name": "bitcoin-game",
+  "description": "Bitcoin Game",
+  "version": "0.0.1",
+  "repository": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "backbone": "~1.2.3",
+    "skeleton": "skeleton-css#~2.0.4"
+  },
+  "devDependencies": {
+    "jquery": "^2.2.1"
+  }
+}
