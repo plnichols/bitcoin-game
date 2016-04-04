@@ -1,5 +1,7 @@
 docs/*
 css/*
+idea/*
+.idea/*
 .DS_Store
 **/main.js
 **/main.css
