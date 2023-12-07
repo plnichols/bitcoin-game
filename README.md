@@ -1,4 +1,7 @@
 # Bitcoin Game
+
+### Technical Test - Poker Stars
+
 The app was built using Backbone.js and as a client-side application, all data (rate, bet, result, balance, etc...) is stored in the browser's local storage.
 
 The idea behind the application architecture was to use a component-based approach. This helps focus on single functionality and develop smaller components, easier to maintain, test and scale.
@@ -9,7 +12,7 @@ This being my first experience with Backbone, I'm sure some parts of the JS appl
 
 
 
-# Run project
+#### Run project
 - Download `app` folder from Git (and/or download zip file).
 - Extract/unzip content of zip file on your computer.
 - Open `app/index.html` in your browser.
